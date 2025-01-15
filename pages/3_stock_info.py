@@ -51,7 +51,7 @@ with st.sidebar:
 
     st.write(date_range)  # 날짜 어떻게 표시되는지 모르겠으면 출력해서 확인해보기
 
-    accept = st.button('확인')
+    accept = st.button('주가 데이터 조회')
 
 if accept:
     ticker_symbol = get_ticker_symbol(stock_name)  
