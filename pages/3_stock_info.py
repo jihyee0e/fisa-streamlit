@@ -29,21 +29,14 @@ def get_ticker_symbol(company_name):
 
 with st.sidebar:
     # stock_name을 입력받는 input창
-    stock_name = st.text_input('회사 이름을 입력하세요: ')
-    # 코드 조각 추가
-    # ticker_symbol = get_ticker_symbol(stock_name)     
+    stock_name = st.text_input('회사 이름을 입력하세요: ')  
 
     today = datetime.datetime.now()
     this_year = today.year  # + 1
     jan_1 = datetime.date(this_year, 1, 1)
-    # dec_31 = datetime.date(this_year, 12, 31)
-    # dec_31 = today
-
     date_range = st.date_input(
         "시작일과 종료일을 입력하세요",
-        # (jan_1, datetime.date(this_year, 1, 7)),
         (jan_1, today),  # default
-        # dec_31,
         None,   # min_value
         today,
         format="MM.DD.YYYY",
