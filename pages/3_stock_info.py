@@ -61,7 +61,8 @@ if accept:
                 low=df['Low'],
                 close=df['Close'])])
 
-    fig.show()
+    st.subheader(f"[{stock_name}] 주가 데이터 그래프")
+    st.plotly_chart(fig, use_container_width=True)
 
     excel_data = BytesIO()      
     df.to_excel(excel_data)
